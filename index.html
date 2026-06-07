@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Python Developer — FastAPI, PostgreSQL, React. Ecuador.">
+  <title>vanDevBett — Python Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    .cursor {
+      position: fixed;
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      mix-blend-mode: screen;
+    }
+    .cursor-ring {
+      position: fixed;
+      width: 32px; height: 32px;
+      border: 1px solid rgba(0, 170, 255, 0.4);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transition: width 0.2s, height 0.2s, border-color 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">./vanDevBett</a>
+      <ul class="nav-links">
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label fade-up">Available for work</div>
+      <div class="status fade-up delay-1">
+        <span class="status-dot"></span>
+        Open to junior opportunities · Ecuador 🇪🇨
+      </div>
+      <h1 class="hero-name fade-up delay-2">
+        [Tu Nombre]<br><span>Developer</span>
+      </h1>
+      <p class="hero-role fade-up delay-3">
+        <span class="highlight">Python</span> · FastAPI · PostgreSQL · React
+      </p>
+      <p class="hero-bio fade-up delay-4">
+        I build backend systems that are clean, tested and production-ready.
+        REST APIs, real-time applications and fullstack projects — all with
+        a focus on code quality and good architecture.
+      </p>
+      <div class="hero-actions fade-up delay-5">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="https://github.com/vanDevBett" class="btn btn-outline" target="_blank">GitHub Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="stack">
+    <div class="container">
+      <p class="section-label reveal">02 — Skills</p>
+      <h2 class="section-title reveal">Tech Stack</h2>
+      <div class="stack-grid reveal">
+        <div class="stack-item">
+          <p class="stack-category">Backend</p>
+          <div class="stack-tags">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">SQLAlchemy</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">WebSockets</span>
+          </div>
+        </div>
+        <div class="stack-item">
+          <p class="stack-category">Frontend</p>
+          <div class="stack-tags">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Axios</span>
+          </div>
+        </div>
+        <div class="stack-item">
+          <p class="stack-category">DevOps & Tools</p>
+          <div class="stack-tags">
+            <span class="tag">Docker</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Railway</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">pytest</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="projects">
+    <div class="container">
+      <p class="section-label reveal">03 — Work</p>
+      <h2 class="section-title reveal">Featured Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-item reveal">
+          <div>
+            <p class="project-number">01 / REALTIME</p>
+            <p class="project-name">Realtime Chat</p>
+            <p class="project-desc">WebSocket chat with Redis pub/sub, JWT authentication and multiple rooms. Messages persist in PostgreSQL.</p>
+            <div class="project-tags">
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">WebSockets</span>
+              <span class="project-tag">Redis</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Docker</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://realtime-chat-production-3725.up.railway.app/docs" target="_blank" class="project-live">Live ↗</a>
+            <a href="https://github.com/vanDevBett/realtime-chat" target="_blank" class="project-gh">GitHub →
