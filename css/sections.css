@@ -169,12 +169,23 @@
   padding: 1.75rem;
   transition: background 0.2s;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-item:hover {
   background: var(--bg2);
+}
+
+.contact-item img {
+  height: 32px;
+  transition: transform 0.2s, filter 0.2s;
+  filter: brightness(0.9);
+}
+
+.contact-item:hover img {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
 }
 
 .contact-label {
