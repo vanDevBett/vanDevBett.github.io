@@ -3,6 +3,15 @@ const ring = document.getElementById('cursorRing');
 
 let mx = 0, my = 0, rx = 0, ry = 0;
 
+cursor.style.opacity = '0';
+
+document.addEventListener('mousemove', e => {
+  cursor.style.opacity = '1';
+  mx = e.clientX;
+  my = e.clientY;
+  cursor.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+});
+
 document.addEventListener('mousemove', e => {
   mx = e.clientX;
   my = e.clientY;
