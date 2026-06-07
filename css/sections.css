@@ -1,0 +1,230 @@
+/* Stack */
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stack-item {
+  background: var(--bg);
+  padding: 1.5rem;
+  transition: background 0.2s;
+}
+
+.stack-item:hover {
+  background: var(--bg2);
+}
+
+.stack-category {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Projects */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-item {
+  background: var(--bg);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: start;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transition: transform 0.25s ease;
+  transform-origin: bottom;
+}
+
+.project-item:hover {
+  background: var(--bg2);
+}
+
+.project-item:hover::before {
+  transform: scaleY(1);
+}
+
+.project-number {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.project-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  max-width: 480px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  background: var(--accent-glow2);
+  padding: 2px 8px;
+  border-radius: 2px;
+  border: 1px solid var(--accent-glow);
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.project-live {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  background: var(--accent-glow2);
+  border: 1px solid var(--accent-glow);
+  padding: 4px 10px;
+  border-radius: 2px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.project-live:hover {
+  background: rgba(0, 170, 255, 0.15);
+}
+
+.project-gh {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.project-gh:hover {
+  color: var(--text-muted);
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.contact-item {
+  background: var(--bg);
+  padding: 1.75rem;
+  transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-item:hover {
+  background: var(--bg2);
+}
+
+.contact-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-arrow {
+  font-family: var(--mono);
+  font-size: 18px;
+  color: var(--accent);
+  margin-top: auto;
+}
+
+/* Footer */
+footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.footer-text span {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .project-item {
+    grid-template-columns: 1fr;
+  }
+}
